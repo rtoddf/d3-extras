@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Interfaces - D3</title>
+		<link href="css/base.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="flex-container">
+            <div class="flex-row">
+                <div class="flex-item">
+					<h3>Time Scales (v3)</h3>
+					<p>D3's time scale is an extension of d3.scale.linear that uses JavaScript Date objects as the domain representation. Thus, unlike the normal linear scale, domain values are coerced to dates rather than numbers; similarly, the invert function returns a date. Most conveniently, the time scale also provides suitable ticks based on time intervals, taking the pain out of generating axes for nearly any time-based domain.</p>
+					<p>A scale object, such as that returned by d3.time.scale, is both an object and a function. That is: you can call the scale like any other function, and the scale has additional methods that change its behavior. Like other classes in D3, scales follow the method chaining pattern where setter methods return the scale itself, allowing multiple setters to be invoked in a concise statement.</p>
+
+					<pre># d3.time.scale()</pre>
+					<p>Constructs a new time scale with the default domain and range; the ticks and tick format are configured for local time.</p>
+					<pre># d3.time.scale.utc()</pre>
+					<p>Constructs a new time scale with the default domain and range; the ticks and tick format are configured for UTC time.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

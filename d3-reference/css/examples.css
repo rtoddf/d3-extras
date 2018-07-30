@@ -1,0 +1,538 @@
+.general03 .result {
+	margin: 0 0 10px 0;
+	padding: 10px;
+	border: 1px solid #444;
+	background-color: rgba(0,0,0,.15);
+}
+
+.general03 .artist {
+	font: bold 13px sans-serif;
+	text-transform: uppercase;
+}
+
+.general03 .song_title {
+	font: 12px sans-serif;
+	margin-bottom: 10px;
+	margin-top: 1px;
+}
+
+.general03 .genre {
+	font: 12px sans-serif;
+	font-style: italic
+}
+
+.general03 .image img {
+	float: right;
+	width: auto;
+	height: auto;
+	border: 1px solid #444;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25)
+}
+
+.general03 .clear {
+	clear: both;
+}
+
+
+.general04 .g-speaker {
+	font: bold 13px sans-serif;
+	text-transform: uppercase;
+}
+
+.general04 .g-speaker-title {
+	color: #aaa;
+	font: 11px sans-serif;
+	margin-bottom: 10px;
+	margin-top: 1px;
+}
+
+
+
+
+.animation01 #example {
+	font: 10px sans-serif;
+}
+
+.animation01 .axis path,
+.animation01 .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.animation01 .line {
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 1.5px;
+}
+
+
+.simple01 .bar {
+	fill: steelblue;
+	cursor: pointer;
+	transition: fill .4s;
+}
+
+.simple01 .bar:hover {
+	fill: #003264;
+}
+
+.simple01 .axis path {
+	fill: none;
+	stroke: black;
+}
+
+.simple01 .axis {
+	font-size: 10px;
+}
+
+.simple01 .x.axis path,
+.simple01 .y.axis path {
+	display: block;
+}
+
+.simple01 .tick {
+	fill: black;
+	// stroke: black;
+}
+
+.simple01 .bubble_text {
+	fill: #fff;
+	font-weight: bold;
+}
+
+.simple01 .axis--x path {
+	display: none;
+}
+
+
+
+.barchart01 .axis path,
+.barchart01 .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.barchart01 .x.axis path {
+	display: none;
+}
+
+
+
+.barchart02 #example {
+	font: 10px sans-serif;
+}
+
+.barchart02 .axis path,
+.barchart02 .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.barchart02 .bar {
+	fill: steelblue;
+}
+
+.barchart02 .x.axis path {
+	display: none;
+}
+
+
+
+
+.barchart05 #example svg {
+	font: 10px sans-serif;
+}
+
+.barchart05 .axis {
+	shape-rendering: crispEdges;
+}
+
+.barchart05 .axis path {
+	fill: none;
+}
+
+.barchart05 .x.axis line {
+	stroke: #fff;
+	stroke-opacity: .8;
+}
+
+.barchart05 .y.axis path {
+	stroke: black;
+}
+
+
+
+
+
+.barchart06 svg {
+	font: 10px sans-serif;
+}
+
+.barchart06 .y.axis path {
+	display: none;
+}
+
+.barchart06 .y.axis line {
+	stroke: #fff;
+	stroke-opacity: .2;
+	shape-rendering: crispEdges;
+}
+
+.barchart06 .y.axis .zero line {
+	stroke: #000;
+	stroke-opacity: 1;
+}
+
+.barchart06 .title {
+	font: 300 78px Helvetica Neue;
+	fill: #666;
+}
+
+.barchart06 .birthyear,
+.barchart06 .age {
+	text-anchor: middle;
+}
+
+.barchart06 .birthyear {
+	fill: #fff;
+}
+
+.barchart06 rect {
+	fill-opacity: .6;
+	fill: #e377c2;
+}
+
+.barchart06 rect:first-child {
+	fill: #1f77b4;
+}
+
+.multiple-chord .chord path {
+	fill-opacity: .67;
+	stroke: #000;
+	stroke-width: .5px;
+}
+	
+.multiple-chord .chart {
+	float: left;
+	font: 10px sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 340px;
+}
+
+.chordchart01 .chord path {
+	fill-opacity: .67;
+	stroke: #000;
+	stroke-width: .5px;
+}
+
+
+.chordchart05 {
+	font: 10px sans-serif;
+}
+
+.chordchart05 .chord path {
+	fill-opacity: .67;
+	stroke: #000;
+	stroke-width: .5px;
+}
+
+
+
+.chordchart06 .group text {
+	font: 11px sans-serif;
+	pointer-events: none;
+}
+
+.chordchart06 .group path {
+	stroke: #000;
+}
+
+.chordchart06 path.chord {
+	stroke-width: .75;
+	fill-opacity: .75;
+}
+
+
+
+
+.chordchart03 svg {
+	font: 10px sans-serif;
+}
+
+.chordchart03 #circle circle {
+	fill: none;
+	pointer-events: all;
+}
+
+.chordchart03 .group path {
+	fill-opacity: .5;
+}
+
+.chordchart03 path.chord {
+	stroke: #000;
+	stroke-width: .25px;
+}
+
+.chordchart03 #circle:hover path.fade {
+	display: none;
+}
+
+
+
+
+
+.piechart01 .arc path,
+.piechart01 .arc text {
+	cursor: pointer;
+	stroke: #000
+}
+
+.piechart01 .tooltip {
+	position: absolute;
+	padding: 8px;
+	font: 10px sans-serif;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	text-shadow: 0 -1px 0px black;
+	padding: 8px 10px;
+	font-size: 12px;
+	line-height: 12px;
+	white-space: nowrap;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	pointer-events: none;
+}
+
+.piechart01 .tooltip span {
+	display: block;
+}
+
+.piechart01 .pie_label {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.piechart01 #legend .legend_box {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-top: 3px;
+	border: 1px solid rgba(0,0,0,1);
+}
+
+.piechart01 #legend span {
+	margin-right: 10px;
+}
+
+
+
+
+.piechart03 text {
+	font-size: 14px;
+	text-transform: capitalize
+}
+
+.piechart03 .rule {
+	display: block;
+}
+
+.piechart03 .rank {
+	margin-right: 20px;
+}
+
+.piechart03 .title {
+	margin-right: 40px;
+}
+
+.piechart03 .instances {
+	margin-right: 40px;
+}
+
+.line01 {
+	font-size: 10px;
+}
+
+.line01 .axis path,
+.line01 .line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+
+
+
+
+
+.general21 .polygon path {
+	fill: #000;
+	fill-opacity: .3;
+}
+
+.general21 .circle {
+	fill: red;
+	fill-opacity: .3;
+}
+
+.general21 .circle.intersects {
+	fill: green;
+}
+
+.general21 .polygon circle {
+	fill: #000;
+	stroke: #fff;
+	cursor: move;
+}
+
+
+
+.force01 rect {
+	fill: none;
+	pointer-events: all;
+}
+
+
+.force01 circle {
+	stroke: #fff;
+}
+
+
+.force02 marker#licensing {
+	fill: green;
+}
+
+.force02 path.link.licensing {
+	stroke: green;
+}
+
+.force02 path.link.resolved {
+	stroke-dasharray: 0,2 1;
+}
+
+.force02 text {
+	font: 10px sans-serif;
+	pointer-events: none;
+}
+
+.force02 text.shadow {
+	stroke: #fff;
+	stroke-width: 3px;
+	stroke-opacity: .8;
+}
+
+
+
+.force03 path.link {
+	fill: none;
+	stroke: #666;
+	stroke-width: 1.5px;
+}
+
+.force03 circle {
+	fill: #ccc;
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+.force03 text {
+	fill: #000;
+	font: 10px sans-serif;
+	pointer-events: none;
+}
+
+
+.time-axis .axis text {
+  font: 10px sans-serif;
+}
+
+.time-axis .x.axis path,
+.time-axis .y.axis path {
+	display: block;
+}
+
+.time-axis .axis line,
+.time-axis .axis path {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+
+.ttip .tooltip {
+	position: absolute;
+	padding: 8px;
+	font: 10px sans-serif;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	text-shadow: 0 -1px 0px black;
+	padding: 8px 10px;
+	font-size: 12px;
+	line-height: 12px;
+	white-space: nowrap;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	pointer-events: none;
+}
+
+.ttip .tooltip span {
+	display: block;
+}
+
+
+
+
+
+.scales01 .axis {
+	fill: none;
+	stroke: #000;
+}
+
+.scales01 .axis text {
+	stroke: none;
+}
+
+.scales01 .x.axis path,
+.scales01 .y.axis path {
+	stroke: #000;
+	display: block;
+}
+
+.scales01 .tick {
+	fill: black;
+}
+
+
+
+
+
+.general02 path.line {
+	fill: none;
+	stroke: #666;
+	stroke-width: 1.5px;
+}
+
+.general02 path.area {
+	fill: #e7e7e7;
+}
+
+.general02 .axis {
+	shape-rendering: crispEdges;
+}
+
+.general02 .x.axis line {
+	stroke: #999;
+}
+
+	/* this is important when getting a black box */
+.general02 .x.axis path {
+	display: none;
+}
+
+.general02 .y.axis line, .y.axis path {
+	fill: none;
+	stroke: #000;
+}
