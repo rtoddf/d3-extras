@@ -6,22 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Interfaces - D3</title>
-		<link href="css/base.css" rel="stylesheet" />
+		<link href="../../../css/layouts.css" rel="stylesheet" />
+		<link href="../../../css/displays.css" rel="stylesheet" />
 		<link href="css/poc-poster01.css" rel="stylesheet">
 	</head>
 
-	<body>
-		<div class="flex-container">
-            <div class="flex-row">
-                <div class="flex-item" data-weight=2>
-					<div class="display">
-						<h3>Propaganda Poster - SVG</h3>
-						<div id="poster"></div>
-						<p>JS Size: 11k</p>
+	<body data-theme="home">
+		<div class="container">
+			<header>
+				<h2>Propaganda Poster - SVG</h2>
+				<p>JS Size: 11k</p>
 						<p>Plane SVG Size: 5k</p>
-					</div>
+			</header>
+			<div class="grid">
+				<div class="display">
+					<div id="poster"></div>
+					
 				</div>
-				<div class="flex-item"></div>
 			</div>
 		</div>
 		<script src="../../scripts/lib/jquery/jquery.min.js"></script>
