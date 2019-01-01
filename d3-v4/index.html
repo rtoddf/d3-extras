@@ -6,34 +6,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>Interfaces - D3</title>
-		<link href="../../css/base.css" rel="stylesheet" />
+		<link href="../../../css/layouts.css" rel="stylesheet" />
+		<link href="../../../css/displays.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 
-	<body>
-		<div class="flex-container">
-            <div class="flex-row">
-                <div class="flex-item">
+	<body data-theme="home">
+		<div class="container">
+			<header>
+				<h2>D3 v4 Trials</h2>
+			</header>
+			<div class="grid" data-col="2">
+				<article class="panel">
 					<h3>V4 Chart Trials</h3>
 					<ul>
 						<li><a href="other-barchart-letter-frequency.html">Bar Chart - Letter Frequency</a></li>
 						<li><a href="other-line-graph02.html">Simple Line Graph</a></li>
 					</ul>
-				</div>
-				<div class="flex-item">
+				</article>
+				<article class="panel">
 					<h3>V4 Map Trials - Other's Files</h3>
 					<ul>
 						<li><a href="other-basic-us-map01.html">Basic US Map</a></li>
 					</ul>
-
+				</article>
+				<article class="panel">
 					<h3>V4 Map Trials - Reworking</h3>
 					<ul>
 						<li><a href="simple-us-airports.html">US Airports</a></li>
 					</ul>				
-
+				</article>
+				<article class="panel">
 					<h3>V4 Notes</h3>
-					<p>What's New: <a href="https://iros.github.io/d3-v4-whats-new/#26" target="_blank">https://iros.github.io/d3-v4-whats-new/#26</a></p>
-				</div>
-				<div class="flex-item"></div>
+					<ul>
+						<li><a href="https://iros.github.io/d3-v4-whats-new/#26" target="_blank">What's New</a></li>
+					</ul>
+				</article>
 
 <!-- 					<h3>New Line Interpolation</h3>
 					<pre>
@@ -60,7 +68,6 @@ var valueline = d3.svg.line()
 	.y(function(d){ return yScale(d.y) })
 	.interpolate('linear')
 						</pre> -->
-				</div>
 			</div>
 		</div>
 	</body>
