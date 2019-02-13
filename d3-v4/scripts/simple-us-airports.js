@@ -1,10 +1,10 @@
-var container_parent = $('.display') ,
-	chart_container = $('#map'),
-	margins = {top: 20, right: 20, bottom: 20, left: 70},
-	width = container_parent.width(),
-	height = (width * .6) - margins.top - margins.bottom,
+var container_parent = document.querySelector('.display') ,
+	chart_container = document.querySelector('#map'),
+	margins = {top: 20, right: 20, bottom: 20, left: 20},
+	width = container_parent.offsetWidth,
+	height = width - margins.top - margins.bottom,
 	vis, vis_group, aspect,
-	scale_amount = '.90'
+	scale_amount = '1.15'
 
 var projection = d3.geoAlbers()
 
@@ -25,7 +25,7 @@ vis_group = vis.append('g')
         'transform': 'translate(' + -(margins.left) + ', ' + -(margins.top) + ') scale(' + scale_amount + ')'
     })
 
-aspect = chart_container.width() / chart_container.height()
+aspect = chart_container.offsetWidth / chart_container.offsetHeight
 
 d3.queue()
 	.defer(d3.json, 'data/us.json')
@@ -37,7 +37,7 @@ function ready(error, us, airports){
 		.datum(topojson.feature(us, us.objects.land))
 		.attrs({
 			'd': path,
-			'fill': '#ccc'
+			'fill': '#baba71'
 		})
 
 	vis_group.append('path')
@@ -47,7 +47,7 @@ function ready(error, us, airports){
 		.attrs({
 			'd': path,
 			'fill': 'none',
-			'stroke': 'rgba(255,255,255,1)',
+			'stroke': '#333',
 			'stroke-width': 2
 		})
 
@@ -55,14 +55,14 @@ function ready(error, us, airports){
 		.datum(topojson.feature(airports, airports.objects.airports))
 		.attrs({
 			'd': path,
-			'fill': '#666',
+			'fill': '#fff',
 		})
 }
 
-$(window).on('resize', function() {
-	var targetWidth = container_parent.width()
-	vis.attrs({
-		'width': targetWidth,
-		'height': Math.round(targetWidth / aspect)
-	})
-})
+// $(window).on('resize', function() {
+// 	var targetWidth = container_parent.width()
+// 	vis.attrs({
+// 		'width': targetWidth,
+// 		'height': Math.round(targetWidth / aspect)
+// 	})
+// })

@@ -1,7 +1,10 @@
-.line {
-	fill: none;
-	stroke: #003264;
-	stroke-width: 2px;
+.line-graph text {
+	fill: #fff;
+}
+
+.line-graph .domain,
+.line-graph .tick line {
+	stroke: #fff;
 }
 
 .simple01 .bar {
@@ -30,7 +33,7 @@
 
 .simple01 .tick {
 	fill: black;
-	// stroke: black;
+	/* stroke: black; */
 }
 
 .simple01 .bubble_text {

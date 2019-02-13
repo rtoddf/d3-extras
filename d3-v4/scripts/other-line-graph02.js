@@ -2,11 +2,11 @@
 
 var container_parent = document.querySelector('.display') ,
 	chart_container = document.querySelector('#example'),
-	margins = {top: 20, right: 20, bottom: 20, left: 30},
+	margins = {top: 20, right: 20, bottom: 20, left: 20},
 	width = container_parent.offsetWidth - margins.left - margins.right,
-	height = (width * 0.4) - margins.top - margins.bottom,
+	height = (width * 0.3) - margins.top - margins.bottom,
 	vis, vis_group, aspect,
-	line_color = '#003264',
+	line_color = '#ccc',
 	line_width = 2,
 	circle_radius = 5
 
@@ -35,7 +35,7 @@ var y = d3.scaleLinear().range([height, 0]);
 var valueline = d3.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.close); })
-    .curve(d3.curveLinear)
+	.curve(d3.curveLinear)
 
 d3.csv('data/data.csv', function(error, data) {
 		if (error) throw error;
@@ -58,8 +58,12 @@ d3.csv('data/data.csv', function(error, data) {
 	// Add the valueline path.
 	vis_group.append('path')
 		.data([data])
-		.attr('class', 'line')
-		.attr('d', valueline);
+		.attrs({
+			'd': valueline,
+			'fill': 'none',
+			'stroke': '#fff',
+			'stroke-width': '2px'
+		})
 
 	var circles = vis_group.selectAll('circle')
 		.data(data)
@@ -72,13 +76,13 @@ d3.csv('data/data.csv', function(error, data) {
 				return y(d.close)
 			},
 			'r': circle_radius,
-			'fill': line_color
+			'fill': '#fff'
 		})
 
 	// Add the X Axis
 	vis_group.append('g')
 		.attr('transform', 'translate(0,' + height + ')')
-		.call(d3.axisBottom(x));
+		.call(d3.axisBottom(x))
 
 	// Add the Y Axis
 	vis_group.append('g')
