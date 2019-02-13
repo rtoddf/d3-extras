@@ -1,12 +1,12 @@
-var container_parent = $('.display'),
-	chart_container = $('#example'),
+var container_parent = document.querySelector('.display'),
+	chart_container = document.querySelector('#example'),
 	margins = {top: 20, right: 20, bottom: 30, left: 40},
-	width = +container_parent.width() - margins.left - margins.right,
-	height = +(+container_parent.width() * 0.5) - margins.top - margins.bottom,
+	width = +container_parent.offsetWidth - margins.left - margins.right,
+	height = +(+container_parent.offsetWidth * 0.4) - margins.top - margins.bottom,
 	vis, vis_group, aspect
 
-var svgWidth = +container_parent.width()
-var svgHeight = +(+container_parent.width() * 0.5)
+var svgWidth = +container_parent.offsetWidth
+var svgHeight = +(+container_parent.offsetWidth * 0.4)
 
 vis = d3.select('svg')
 	.attr('width', svgWidth)
@@ -22,7 +22,7 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var vis_group = vis.append('g')
 	.attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 
-aspect = chart_container.width() / chart_container.height()
+aspect = chart_container.offsetWidth / chart_container.offsetHeight
 
 d3.tsv('data/letter-frequency.tsv', function(d) {
 	// make all intergers and positive
@@ -69,13 +69,13 @@ d3.tsv('data/letter-frequency.tsv', function(d) {
 			})
 })
 
-$(window).on('resize', function() {
-	var targetWidth = container_parent.width()
+// $(window).on('resize', function() {
+// 	var targetWidth = container_parent.width()
 
-	console.log('targetWidth: ', targetWidth)
+// 	console.log('targetWidth: ', targetWidth)
 
-	vis.attr({
-		'width': targetWidth,
-		'height': Math.round(targetWidth / aspect)
-	})
-})
+// 	vis.attr({
+// 		'width': targetWidth,
+// 		'height': Math.round(targetWidth / aspect)
+// 	})
+// })

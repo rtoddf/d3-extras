@@ -1,17 +1,17 @@
 // https://bl.ocks.org/d3noob/ced1b9b18bd8192d2c898884033b5529
 
-var container_parent = $('.display') ,
-	chart_container = $('#example'),
+var container_parent = document.querySelector('.display') ,
+	chart_container = document.querySelector('#example'),
 	margins = {top: 20, right: 20, bottom: 20, left: 30},
-	width = container_parent.width() - margins.left - margins.right,
-	height = (width * 0.5) - margins.top - margins.bottom,
+	width = container_parent.offsetWidth - margins.left - margins.right,
+	height = (width * 0.4) - margins.top - margins.bottom,
 	vis, vis_group, aspect,
 	line_color = '#003264',
 	line_width = 2,
 	circle_radius = 5
 
-var svgWidth = +container_parent.width()
-var svgHeight = +(+container_parent.width() * 0.5)
+var svgWidth = +container_parent.offsetWidth
+var svgHeight = +(+container_parent.offsetWidth * 0.4)
 
 vis = d3.select('svg')
 	.attrs({
@@ -22,7 +22,7 @@ vis = d3.select('svg')
 vis_group = vis.append('g')
 	.attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 
-aspect = chart_container.width() / chart_container.height()
+aspect = chart_container.offsetWidth / chart_container.offsetHeight
 
 // parse the date / time
 var parseTime = d3.timeParse('%d-%b-%y');
@@ -86,10 +86,10 @@ d3.csv('data/data.csv', function(error, data) {
 
 })
 
-$(window).on('resize', function() {
-	var targetWidth = container_parent.width()
-	vis.attr({
-		'width': targetWidth,
-		'height': Math.round(targetWidth / aspect)
-	})
-})
+// $(window).on('resize', function() {
+// 	var targetWidth = container_parent.width()
+// 	vis.attr({
+// 		'width': targetWidth,
+// 		'height': Math.round(targetWidth / aspect)
+// 	})
+// })
