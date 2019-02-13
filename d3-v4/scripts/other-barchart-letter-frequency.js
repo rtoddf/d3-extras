@@ -41,8 +41,10 @@ d3.tsv('data/letter-frequency.tsv', function(d) {
 	})]);
 
 	vis_group.append('g')
-		.attr('class', 'axis axis--x')
-		.attr('transform', 'translate(0,' + height + ')')
+		.attrs({
+			'class': 'axis axis--x',
+			'transform': 'translate(0,' + height + ')'
+		})
 		.call(d3.axisBottom(x));
 
 	vis_group.append('g')
@@ -57,17 +59,24 @@ d3.tsv('data/letter-frequency.tsv', function(d) {
 
 	vis_group.selectAll('.bar')
 		.data(data)
-		.enter().append('rect')
-			.attr('class', 'bar')
-			.attr('x', function(d) { return x(d.letter); })
-			.attr('y', function(d) { return y(d.frequency); })
-			.attr('width', x.bandwidth())
-			.attr('height', function(d) { return height - y(d.frequency); })
-			.attr('fill', 'lightblue')
-			.attr({
-				'fill': 'lightblue'
-			})
+			.enter().append('rect')
+		.attrs({
+			'x': function(d) {
+				return x(d.letter);
+			},
+			'y': function(d) {
+				return y(d.frequency);
+			},
+			'class': 'bar',
+			'width': x.bandwidth(),
+			'height': function(d) {
+				return height - y(d.frequency);
+			},
+			'fill': '#baba71'
+		})
 })
+
+
 
 // $(window).on('resize', function() {
 // 	var targetWidth = container_parent.width()
