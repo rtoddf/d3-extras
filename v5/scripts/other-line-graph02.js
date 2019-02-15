@@ -59,8 +59,12 @@ d3.csv("data/data.csv").then(function(data, error) {
 	// Add the valueline path.
 	vis_group.append('path')
 		.data([data])
-		.attr('class', 'line')
-		.attr('d', valueline);
+		.attrs({
+			'd': valueline,
+			'fill': 'none',
+			'stroke': '#fff',
+			'stroke-width': '2px'
+		})
 
 	var circles = vis_group.selectAll('circle')
 		.data(data)
@@ -73,7 +77,7 @@ d3.csv("data/data.csv").then(function(data, error) {
 				return y(d.close)
 			},
 			'r': circle_radius,
-			'fill': line_color
+			'fill': '#fff'
 		})
 
 	// Add the X Axis

@@ -2,7 +2,7 @@
 
 var container_parent = document.querySelector('.display') ,
 	chart_container = document.querySelector('#example'),
-	margins = {top: 20, right: 20, bottom: 20, left: 20},
+	margins = {top: 20, right: 20, bottom: 20, left: 40},
 	width = container_parent.offsetWidth - margins.left - margins.right,
 	height = (width * 0.3) - margins.top - margins.bottom,
 	vis, vis_group, aspect,
