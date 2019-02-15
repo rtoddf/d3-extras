@@ -2,11 +2,11 @@
 
 var container_parent = document.querySelector('.display') ,
 	chart_container = document.querySelector('#example'),
-	margins = {top: 20, right: 20, bottom: 20, left: 30},
+	margins = {top: 20, right: 20, bottom: 20, left: 40},
 	width = container_parent.offsetWidth - margins.left - margins.right,
-	height = (width * 0.4) - margins.top - margins.bottom,
+	height = (width * 0.3) - margins.top - margins.bottom,
 	vis, vis_group, aspect,
-	line_color = '#003264',
+	line_color = '#ccc',
 	line_width = 2,
 	circle_radius = 5
 

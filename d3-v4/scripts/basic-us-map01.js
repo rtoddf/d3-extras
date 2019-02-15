@@ -1,9 +1,9 @@
 // http://bl.ocks.org/rveciana/a2a1c21ca1c71cd3ec116cc911e5fce9
 
-var container_parent = $('.display') ,
-    chart_container = $('#map'),
+var container_parent = document.querySelector('.display') ,
+    chart_container = document.querySelector('#map'),
     margins = {top: 0, right: 20, bottom: 20, left: 20},
-    width = container_parent.width(),
+    width = container_parent.offsetWidth,
     height = (width * .6),
     vis, vis_group, aspect
 
@@ -20,12 +20,14 @@ vis = d3.select('#map').append('svg')
 	})
 
 vis_group = vis.append('g')
-aspect = chart_container.width() / chart_container.height()
+aspect = chart_container.offsetWidth / chart_container.offsetHeight
 
 d3.json('data/us.json', function(error, us) {
-  vis_group.append('path')
+	vis_group.append('path')
 	  .attrs({
-	  	'class': 'states'
+		'fill': '#ccc',
+		'stroke': '#333',
+		'stroke-width': '1px'
 	  })
 	  .datum(topojson.feature(us, us.objects.states))
 	  .attr('d', path);  
